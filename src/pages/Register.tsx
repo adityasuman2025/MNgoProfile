@@ -19,7 +19,7 @@ export default function Register() {
         setIsRegisteringUser(true);
         try {
             await sendRequestToAPI(API_BASE_URL, `${API_USERS_REF}/register`, "post", { username, name, email, password, passcode });
-            makeSnackBar("Sucessfully registered. Please Login to continue", "success");
+            makeSnackBar("You are sucessfully registered. Please use the credentials to login on any MNgo App", "success");
         } catch (e: any) {
             makeSnackBar(e.message);
         }
@@ -31,7 +31,7 @@ export default function Register() {
         <>
             <SnackBar open={snackBarData.visible} msg={snackBarData.msg} type={snackBarData.type} onClose={() => setSnackBarData({ visible: false })} />
 
-            <div className='loginSignUpPage'>
+            <div className='mngo-flex mngo-flex-col mngo-flex-1 mngo-items-center mngo-justify-center mngo-grow mngo-h-screen '>
                 <RegisterForm
                     styles={{ inputClassName: "inputBox" }}
                     projectTitle={APP_NAME}

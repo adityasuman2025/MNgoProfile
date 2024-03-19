@@ -1,8 +1,6 @@
 :root {
-  --primary_1: #AC3B61;
-  --primary_2: #DA7B93;
-  --secondary_1: #d04701;
-  --secondary_2: #78244C;
+  --primary_1: #1e304b;
+  --primary_2: #111729;
 }
 
 body {
@@ -13,7 +11,7 @@ body {
             sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(120deg, var(--primary_1), var(--primary_2)) !important;
+  background: linear-gradient(to bottom left, var(--primary_1), var(--primary_2));
   color: #d8d8d8;
 }
 
@@ -36,6 +34,10 @@ h1,
   padding: 0;
   border: none;
   background: none;
+}
+
+.inputBox {
+  background: black !important;
 }
 
 *, ::before, ::after {
@@ -136,4 +138,32 @@ h1,
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
+}
+
+.mngo :is(.mngo-flex) {
+  display: flex;
+}
+
+.mngo :is(.mngo-h-screen) {
+  height: 100vh;
+}
+
+.mngo :is(.mngo-flex-1) {
+  flex: 1 1 0%;
+}
+
+.mngo :is(.mngo-grow) {
+  flex-grow: 1;
+}
+
+.mngo :is(.mngo-flex-col) {
+  flex-direction: column;
+}
+
+.mngo :is(.mngo-items-center) {
+  align-items: center;
+}
+
+.mngo :is(.mngo-justify-center) {
+  justify-content: center;
 }
